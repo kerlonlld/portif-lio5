@@ -1,0 +1,11 @@
+{
+  "name": "Kerlon Luan | Portfólio",
+  "short_name": "Portfólio KL",
+  "description": "Portfólio de projetos de desenvolvimento web de Kerlon Luan.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#171515",
+  "theme_color": "#002898"
+}

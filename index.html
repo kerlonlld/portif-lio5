@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    
+    <link rel="manifest" href="site.webmanifest" />
+
     <link rel="stylesheet" href="styles.css">
     <title>devClab portifolio</title>
 </head>
 <body>
+    <div class="progresso-rolagem" aria-hidden="true"><span id="barra-rolagem"></span></div>
     <div class="particulas"></div>
 
     <nav class="navegacao">
@@ -26,12 +27,49 @@
         </ul>
     </nav>
     
-    <main id="inicio" class="cabecalho">
-      <div>
-        <img src="IMG_20250922_212204.jpg" alt="Foto de Kerlon Luan" class="foto-perfil"> 
-         <h1>Kerlon Luan</h1>
-         <p class="cabecalho-sub-titulo">Desenvolvedor Full Stack</p>
-      </div>
+        <main id="inicio" class="cabecalho">
+            <div class="hero-conteudo">
+                <div class="hero-texto">
+                    <span class="hero-etiqueta"><span class="status-ponto"></span> Portfólio profissional · 2026</span>
+                    <h1>Olá, eu sou<br><span>Kerlon Luan.</span></h1>
+                    <p class="cabecalho-sub-titulo">Desenvolvedor Full Stack criando experiências digitais úteis, bonitas e pensadas para pessoas.</p>
+                    <div class="hero-acoes">
+                        <a href="#projetos" class="hero-botao hero-botao-principal">Explorar projetos <span aria-hidden="true">↓</span></a>
+                        <a href="#contato" class="hero-botao hero-botao-secundario">Vamos conversar <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="hero-destaques" aria-label="Áreas de atuação">
+                        <span>Desenvolvimento web</span><span>Interfaces responsivas</span><span>Aplicações full stack</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual" id="area-arrastavel" aria-label="Área interativa com cartão arrastável">
+                    <div class="hero-orbita orbita-um"></div>
+                    <div class="hero-orbita orbita-dois"></div>
+                    <article class="janela-arrastavel" id="cartao-arrastavel">
+                        <header class="janela-cabecalho" id="alca-arrastar" title="Arraste este cartão dentro da área" role="button" tabindex="0" aria-label="Mover cartão de projetos. Use as setas do teclado para mover.">
+                            <div class="janela-controles" aria-hidden="true"><i></i><i></i><i></i></div>
+                            <span>meu-portfólio / projetos</span>
+                            <span class="janela-arrastar-icone" aria-hidden="true">⠿</span>
+                        </header>
+                        <div class="janela-corpo">
+                            <div class="janela-perfil">
+                                <img src="IMG_20250922_212204.jpg" alt="Retrato de Kerlon Luan" class="foto-perfil">
+                                <div><span class="janela-legenda">DESENVOLVEDOR</span><h2>Kerlon Luan</h2><p>Transformando ideias em produtos digitais.</p></div>
+                            </div>
+                            <div class="janela-divisor"></div>
+                            <div class="janela-projetos-titulo"><span>Projetos em destaque</span><span>06</span></div>
+                            <div class="janela-mini-projetos">
+                                <span><i class="mini-ponto azul"></i> Gestor Financeiro</span><span>React · Firebase</span>
+                                <span><i class="mini-ponto roxo"></i> Açaí do Lê</span><span>React · Vercel</span>
+                                <span><i class="mini-ponto verde"></i> Design de Sobrancelhas</span><span>Agenda · Firestore</span>
+                            </div>
+                            <a href="#projetos" class="janela-link">Ver todos os estudos de caso <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <span class="dica-arrastar"><span aria-hidden="true">✥</span> Experimente arrastar o cartão</span>
+                </div>
+            </div>
+            <a href="#sobre" class="rolar-indicador" aria-label="Rolar para a seção Sobre"><span></span> Role para descobrir</a>
     </main>
     
     <section id="sobre" class="sobre">
@@ -43,90 +81,189 @@
 
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">Meus Projetos</h2>
-    
-    
-   <!-- Projetos Reais de Clientes -->
-<h3 class="projetos-subtitulo">Projetos Reais de Clientes</h3>
-<div class="projetos-caixa">
-    <div class="projetos-item destaque">
-        <div class="badge-cliente">Cliente Real</div>
-        <a href="https://disign-sombranselha.vercel.app/" target="_blank">
-        <img src="olho.jpeg" alt="Site Design de Sobrancelhas" class="projetos-imagem">
-        </a>
-        <div class="caixa-textos-projetos">
-            <h3 class="inf-projeto">Design de Sobrancelhas</h3>
-            <p class="paragrafo-projeto">Plataforma de agendamento online com calendário em tempo real. Cliente agenda pelo celular e a profissional recebe tudo organizado. React, Firebase, Tailwind, FullCalendar.</p>
-            <div class="botoes-projeto">
-                <a href="https://disign-sombranselha.vercel.app/" target="_blank" class="btn-site">Ver site</a>
-                <a href="https://github.com/kerlonlld/disign-sombranselha" target="_blank" class="btn-github">Código</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="projetos-item destaque">
-        <div class="badge-cliente">Cliente Real</div>
-        <a href="https://acai-do-le.vercel.app/" target="_blank">
-        <img src="açai.jpeg" alt="Site Açaí do Lê" class="projetos-imagem">
-        </a>
-        <div class="caixa-textos-projetos">
-            <h3 class="inf-projeto">Açaí do Lê</h3>
-            <p class="paragrafo-projeto">Cardápio digital + sistema de pedidos via WhatsApp. Design mobile-first otimizado pra conversão e vendas rápidas. React, Vite, Tailwind.</p>
-            <div class="botoes-projeto">
-                <a href="https://a-a-do-l.vercel.app/" target="_blank" class="btn-site">Ver site</a>
-                <a href="https://github.com/kerlonlld/a-a--do-l-" target="_blank" class="btn-github">Código</a>
-            </div>
-        </div>
-    </div>
+        <p class="projetos-introducao">Role para conhecer cada projeto por dentro: veja a interface, o diagrama do caso de uso, as decisões técnicas, onde está publicado e o código-fonte.</p>
 
-    <div class="projetos-item destaque">
-        <div class="badge-cliente">Projeto Próprio</div>
-        <a href="https://planejamento-react.vercel.app" target="_blank">
-            <img src="klld.jpeg" alt="KLLD Gestor Financeiro" class="projetos-imagem">
-        </a>
-        <div class="caixa-textos-projetos">
-            <h3 class="inf-projeto">KLLD - Gestor Financeiro</h3>
-            <p class="paragrafo-projeto">Dashboard completo pra controle de patrimônio. Registra receitas, despesas, investimentos, imóveis, carros e lazer. Gráficos em tempo real com Chart.js, autenticação Google e backup na nuvem. React, Firebase, Tailwind.</p>
-            <div class="botoes-projeto">
-                <a href="https://planejamento-react.vercel.app" target="_blank" class="btn-site">Ver site</a>
-                <a href="https://github.com/kerlonlld/Planejamento-react" target="_blank" class="btn-github">Código</a>
+        <h3 class="projetos-subtitulo">Projetos em destaque</h3>
+        <div class="projetos-caixa">
+            <div class="projetos-item destaque">
+                <div class="badge-cliente">Cliente Real</div>
+                <a href="https://disign-sombranselha.vercel.app/" target="_blank" rel="noopener noreferrer" class="projeto-preview projeto-preview-logo">
+                    <img src="olho.jpeg" alt="Identidade visual do projeto Design de Sobrancelhas" class="projetos-imagem">
+                </a>
+                <div class="caixa-textos-projetos">
+                    <h3 class="inf-projeto">Design de Sobrancelhas</h3>
+                    <p class="paragrafo-projeto">Plataforma de agendamento online com calendário em tempo real. Cliente agenda pelo celular e a profissional recebe tudo organizado. React, Firebase, Tailwind, FullCalendar.</p>
+                    <details class="estudo-projeto" open>
+                        <summary>Estudo de caso completo <span>· clique para recolher</span></summary>
+                        <div class="estudo-conteudo">
+                            <figure class="diagrama-caso">
+                                <img src="assets/diagrams/design-sobrancelhas.svg" alt="Diagrama do fluxo de agendamento: cliente, consulta ao calendário, solicitação de horário e organização pela profissional">
+                                <figcaption>Diagrama do caso de uso — fluxo de agendamento descrito para o produto.</figcaption>
+                            </figure>
+                            <section class="doc-bloco"><h4>Problema e objetivo</h4><p>Facilitar o contato entre clientes e a profissional de design de sobrancelhas, permitindo consultar horários e solicitar um atendimento pelo celular, com a agenda organizada em calendário.</p></section>
+                            <section class="doc-bloco"><h4>Atores e fluxo principal</h4><ol><li>A cliente informa nome, data, técnica/serviço e horário no formulário.</li><li>A aplicação valida os campos e grava o agendamento na coleção <strong>appointments</strong> do Cloud Firestore.</li><li>Após salvar, o calendário atualiza e exibe horários disponíveis e atendimentos em vistas de dia, semana ou mês.</li><li>A profissional consulta os dados do atendimento (nome, data, horário e serviço) no calendário.</li></ol><p>Cancelamento, edição de reserva e notificações por e-mail aparecem no repositório como próximos passos, não como funcionalidades concluídas.</p></section>
+                            <section class="doc-bloco"><h4>Escopo e arquitetura implementada</h4><p>Frontend React com Vite; Tailwind CSS, FullCalendar e componentes de interação visual. O módulo Firebase inicializa o Firestore Web SDK: <strong>saveAppointment</strong> cria documentos e <strong>loadAppointments</strong> consulta os agendamentos. Cada documento inclui <strong>name</strong>, <strong>date</strong>, <strong>slot</strong>, <strong>service</strong> e <strong>createdAt</strong>. A interface atualiza o calendário após salvar e mantém cache em memória por até 30 segundos.</p></section>
+                            <section class="doc-bloco"><h4>Banco de dados e proteção de dados</h4><p><strong>Banco:</strong> Cloud Firestore (Firebase), coleção <strong>appointments</strong>. São tratados nome, horário e serviço. Atenção: o README mostra uma regra de exemplo com leitura e escrita públicas (<strong>allow read, write: if true</strong>), inadequada para produção. Não usar dados reais de clientes até restringir as regras e revisar credenciais/configuração no Firebase Console. A região do banco não está documentada.</p></section>
+                            <section class="doc-bloco"><h4>Execução, deploy e documentação</h4><p>O README orienta instalar as dependências npm, copiar <strong>.env.example</strong> para <strong>.env</strong>, preencher a configuração Firebase e iniciar o Vite. Também descreve testes de conexão, funcionalidades, solução de problemas e estrutura dos documentos. <strong>Hospedagem:</strong> Vercel — <a href="https://disign-sombranselha.vercel.app/" target="_blank" rel="noopener noreferrer">abrir aplicação</a>. <strong>Documentação e código:</strong> <a href="https://github.com/kerlonlld/disign-sombranselha" target="_blank" rel="noopener noreferrer">consultar repositório e README</a>.</p></section>
+                            <p class="doc-nota"><strong>Tecnologias verificadas:</strong> React 18, Vite, Tailwind CSS, Firebase/Firestore, FullCalendar, Framer Motion e Three.js/React Three Fiber. Diagrama conceitual baseado no fluxo implementado.</p>
+                        </div>
+                    </details>
+                    <div class="botoes-projeto">
+                        <a href="https://disign-sombranselha.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-site">Abrir projeto publicado ↗</a>
+                        <a href="https://github.com/kerlonlld/disign-sombranselha" target="_blank" rel="noopener noreferrer" class="btn-github">Código no GitHub ↗</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-    <!-- Meus primeiros projetos -->
-    <h3 class="projetos-subtitulo">Meus primeiros projetos</h3>
-    <div class="projetos-caixa">
-        <div class="projetos-item">
-            <a href="https://kerlonlld.github.io/marketplace2/" target="_blank">
-            <img src="digital-commerce.webp" alt="projeto ecommerce" class="projetos-imagem">
-            </a>
-            <div class="caixa-textos-projetos">
-                <h3 class="inf-projeto">MarketPlace</h3>
-                <p class="paragrafo-projeto">Um projeto que está sendo desenvolvido de um site de comércio eletrônico completo com carrinho de compras, sistema de pagamento e gerenciamento de produtos. Desenvolvido usando HTML, CSS e JavaScript.</p>
-            </div>
-        </div>
-        
-        <div class="projetos-item">
-            <a href="https://kerlonlld.github.io/edua-/index.html" target="_blank">
-            <img src="000040290M.jpeg" alt="aplicativo de estudos" class="projetos-imagem">
-            </a>
-            <div class="caixa-textos-projetos">
-                <h3 class="inf-projeto">Educa+</h3>
-                <p class="paragrafo-projeto">Um aplicativo que ainda está em desenvolvimento e oferece lembretes e acompanhamento de progresso, perguntas e respostas e recomenda os melhores sites para estudar. Desenvolvido usando HTML, CSS e JavaScript.</p>
-            </div>
-        </div>
-    </div>
 
+            <div class="projetos-item destaque">
+                <div class="badge-cliente">Cliente Real</div>
+                <a href="https://acai-do-le.vercel.app/" target="_blank" rel="noopener noreferrer" class="projeto-preview projeto-preview-retrato">
+                    <img src="açai.jpeg" alt="Imagem promocional do copo de açaí do projeto Açaí do Lê" class="projetos-imagem">
+                </a>
+                <div class="caixa-textos-projetos">
+                    <h3 class="inf-projeto">Açaí do Lê</h3>
+                    <p class="paragrafo-projeto">Cardápio digital + sistema de pedidos via WhatsApp. Design mobile-first otimizado pra conversão e vendas rápidas. React, Vite, Tailwind.</p>
+                    <details class="estudo-projeto" open>
+                        <summary>Estudo de caso completo <span>· clique para recolher</span></summary>
+                        <div class="estudo-conteudo">
+                            <figure class="diagrama-caso"><img src="assets/diagrams/acai-do-le.svg" alt="Diagrama do pedido: cliente consulta o cardápio, seleciona itens, revisa o pedido e o encaminha pelo WhatsApp"><figcaption>Diagrama do caso de uso — da consulta do cardápio ao contato com a loja.</figcaption></figure>
+                            <section class="doc-bloco"><h4>Problema e objetivo</h4><p>Oferecer um cardápio digital simples e adaptado ao celular para que clientes conheçam os produtos e encaminhem um pedido ao estabelecimento pelo WhatsApp.</p></section>
+                            <section class="doc-bloco"><h4>Atores e fluxo principal</h4><ol><li>O cliente filtra produtos por categoria, consulta preços e escolhe itens personalizáveis com adicionais.</li><li>O cardápio carrega em tempo real os produtos da coleção <strong>produtos</strong> no Cloud Firestore; o carrinho é mantido no app e salvo em <strong>localStorage</strong>.</li><li>No checkout, o cliente informa nome, endereço e forma de pagamento; o app calcula o subtotal e a taxa de entrega.</li><li>Ao finalizar, o sistema monta uma mensagem com itens, quantidades, adicionais e valores e abre o WhatsApp da loja.</li><li>Na rota <strong>/admin</strong>, há operações de inclusão, edição, remoção e marcação de produto esgotado.</li></ol><p>O pedido é encaminhado ao WhatsApp; não há gravação do pedido no Firestore confirmada no código.</p></section>
+                            <section class="doc-bloco"><h4>Escopo e arquitetura implementada</h4><p>Frontend React/Vite com cardápio, filtros, adicionais, carrinho, checkout e painel administrativo. Firebase Web SDK acessa o Cloud Firestore; o catálogo acompanha atualizações e a administração realiza operações CRUD. O carrinho persiste localmente no dispositivo. Número de WhatsApp e senha administrativa são lidos de variáveis Vite.</p></section>
+                            <section class="doc-bloco"><h4>Banco, dados e segurança</h4><p><strong>Banco:</strong> Cloud Firestore, coleção <strong>produtos</strong>. <strong>Carrinho:</strong> localStorage. <strong>Pedidos:</strong> enviados ao WhatsApp, sem persistência confirmada no banco. Os produtos incluem campos como nome, descrição, preço, categoria, imagem, adicionais e disponibilidade. A senha do painel é validada no frontend e a sessão fica em sessionStorage; isso não é uma barreira de segurança real. Proteger as operações com autenticação e regras Firestore restritivas antes de usar dados reais.</p></section>
+                            <section class="doc-bloco"><h4>Publicação e documentação</h4><p><strong>Hospedagem:</strong> Vercel — <a href="https://a-a-do-l.vercel.app/" target="_blank" rel="noopener noreferrer">abrir cardápio</a>. A rota de administração no código é <strong>/admin</strong>; não deve ser considerada segura apenas pela senha da interface. <strong>Repositório:</strong> <a href="https://github.com/kerlonlld/a-a--do-l-" target="_blank" rel="noopener noreferrer">consultar código-fonte e configuração</a>. O README publicado é o modelo inicial do Vite; esta documentação funcional foi descrita a partir do código.</p></section>
+                            <p class="doc-nota"><strong>Tecnologias verificadas:</strong> React, Vite, Tailwind CSS, Firebase/Cloud Firestore, React Router, lucide-react e localStorage.</p>
+                        </div>
+                    </details>
+                    <div class="botoes-projeto">
+                        <a href="https://a-a-do-l.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-site">Abrir projeto publicado ↗</a>
+                        <a href="https://github.com/kerlonlld/a-a--do-l-" target="_blank" rel="noopener noreferrer" class="btn-github">Código no GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projetos-item destaque">
+                <div class="badge-cliente">Projeto Próprio</div>
+                <a href="https://planejamento-react.vercel.app" target="_blank" rel="noopener noreferrer" class="projeto-preview projeto-preview-klld">
+                    <img src="klld.jpeg" alt="Logotipo do KLLD Gestor Financeiro" class="projetos-imagem">
+                </a>
+                <div class="caixa-textos-projetos">
+                    <h3 class="inf-projeto">KLLD - Gestor Financeiro</h3>
+                    <p class="paragrafo-projeto">Dashboard completo pra controle de patrimônio. Registra receitas, despesas, investimentos, imóveis, carros e lazer. Gráficos em tempo real com Chart.js, autenticação Google e backup na nuvem. React, Firebase, Tailwind.</p>
+                    <details class="estudo-projeto" open>
+                        <summary>Estudo de caso completo <span>· clique para recolher</span></summary>
+                        <div class="estudo-conteudo">
+                            <figure class="diagrama-caso"><img src="assets/diagrams/klld-financeiro.svg"  alt="Diagrama do gestor financeiro: usuário entra com Google, registra finanças, consulta gráficos e usa recursos Firebase"><figcaption>Diagrama do caso de uso — registro e acompanhamento financeiro pessoal.</figcaption></figure>
+                            <section class="doc-bloco"><h4>Problema e objetivo</h4><p>Reunir em um único painel informações financeiras e patrimoniais pessoais para apoiar o acompanhamento de receitas, despesas, investimentos, imóveis, veículos e lazer.</p></section>
+                            <section class="doc-bloco"><h4>Atores e fluxo principal</h4><ol><li>O usuário acessa o sistema e autentica-se com Google, conforme a descrição do projeto.</li><li>Registra ou consulta categorias de movimentações e itens do patrimônio.</li><li>Analisa os dados por meio de gráficos e utiliza os recursos de backup em nuvem descritos.</li></ol><p>Permissões, edição, exportação e recuperação de conta são comportamentos que precisam ser confirmados no código.</p></section>
+                            <section class="doc-bloco"><h4>Escopo e arquitetura implementada</h4><p>Aplicação React organizada em módulos para finanças, investimentos, lazer, imóveis e automóveis, com calculadora e gráficos Chart.js. A autenticação usa Firebase Authentication com Google. O frontend consulta e grava dados no Cloud Firestore; investimentos, lazer, imóveis e automóveis filtram registros pelo <strong>userId</strong>. O módulo financeiro mantém um documento principal e snapshots de histórico por usuário.</p></section>
+                            <section class="doc-bloco"><h4>Banco e dados conhecidos</h4><p><strong>Banco:</strong> Cloud Firestore no projeto Firebase de ID <strong>planejamento-ea0ca</strong>, conforme a configuração publicada no repositório. Coleções observadas: <strong>investimentos</strong>, <strong>lazer</strong>, <strong>imoveis</strong>, <strong>automoveis</strong> e <strong>financas</strong>; incluem valores e campos próprios de cada módulo. O histórico financeiro é salvo em uma subcoleção do documento do usuário. <strong>Login:</strong> Firebase Auth via Google. A região do Firestore não está documentada e deve ser confirmada no Console.</p></section>
+                            <section class="doc-bloco"><h4>Segurança e privacidade</h4><p>Os registros financeiros e patrimoniais são sensíveis. Filtrar por UID no frontend não substitui regras de segurança: o Firestore deve validar a autenticação e a propriedade dos documentos em cada operação. Revisar as regras, privacidade, retenção, exportação e exclusão dos dados antes de cadastrar informações reais. A configuração de cliente Firebase no repositório não substitui essas proteções.</p></section>
+                            <section class="doc-bloco"><h4>Publicação e documentação</h4><p><strong>Hospedagem:</strong> Vercel — <a href="https://planejamento-react.vercel.app" target="_blank" rel="noopener noreferrer">abrir gestor publicado</a>. <strong>Repositório:</strong> <a href="https://github.com/kerlonlld/Planejamento-react" target="_blank" rel="noopener noreferrer">consultar código e configuração</a>. O README publicado é o modelo inicial do Vite; a documentação funcional desta página foi elaborada a partir dos componentes e serviços do aplicativo.</p></section>
+                            <p class="doc-nota"><strong>Tecnologias verificadas:</strong> React, Firebase Authentication, Cloud Firestore, Chart.js, React Icons, AOS e Vite. A ferramenta organiza informações e não constitui orientação financeira.</p>
+                        </div>
+                    </details>
+                    <div class="botoes-projeto">
+                        <a href="https://planejamento-react.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-site">Abrir projeto publicado ↗</a>
+                        <a href="https://github.com/kerlonlld/Planejamento-react" target="_blank" rel="noopener noreferrer" class="btn-github">Código no GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projetos-item destaque">
+                <div class="badge-cliente">Projeto Próprio</div>
+                <a href="https://e-cormeci.onrender.com/" target="_blank" rel="noopener noreferrer" class="projeto-preview projeto-preview-e-cormeci">
+                    <img src="Gemini_Generated_Image_ghods3ghods3ghod.jpeg" alt="Logo do E-Cormeci: carrinho de compras e texto E-CORMECE" class="projetos-imagem">
+                </a>
+                <div class="caixa-textos-projetos">
+                    <h3 class="inf-projeto">E-Cormeci</h3>
+                    <p class="paragrafo-projeto">Projeto de e-commerce com catálogo, perfil, endereço, carrinho e fluxo de compra. Frontend React/Vite; o repositório inclui schema PostgreSQL e integração planejada via API.</p>
+                    <details class="estudo-projeto" open>
+                        <summary>Estudo de caso completo <span>· clique para recolher</span></summary>
+                        <div class="estudo-conteudo">
+                            <figure class="diagrama-caso"><img src="assets/diagrams/e-cormeci.svg" alt="Diagrama da jornada no e-commerce: visitante, catálogo, carrinho e solicitação de pedido à API"><figcaption>Diagrama do caso de uso — fluxo do frontend e chamada à API de pedidos.</figcaption></figure>
+                            <section class="doc-bloco"><h4>Problema e objetivo</h4><p>Projeto de e-commerce em desenvolvimento que explora a experiência de navegação por catálogo, seleção de produtos, carrinho e checkout.</p></section>
+                            <section class="doc-bloco"><h4>Atores e fluxo principal</h4><ol><li>O visitante pesquisa o catálogo e consulta os produtos.</li><li>Adiciona produtos ao carrinho e ajusta quantidades.</li><li>Informa/valida endereço; o frontend calcula distância e frete segundo as regras no código.</li><li>Na finalização, a aplicação tenta enviar itens e total para <strong>POST /api/pedidos</strong> e atualiza o histórico.</li></ol><p>O frontend também carrega produtos por <strong>GET /api/produtos</strong> e histórico por <strong>GET /api/pedidos</strong>; o fluxo depende da API estar acessível.</p></section>
+                            <section class="doc-bloco"><h4>Escopo e arquitetura verificada</h4><p>Frontend React com Vite, organizado em áreas de catálogo, carrinho, histórico de compras e perfil/localização. O frontend utiliza <strong>VITE_API_URL</strong>, com padrão local <strong>http://localhost:3001</strong>, para solicitar catálogo e pedidos. Perfil e outros dados de interface são mantidos localmente em partes da aplicação. O repositório contém schema SQL e instruções de banco; a conexão efetiva depende de backend.</p></section>
+                            <section class="doc-bloco"><h4>Banco, estado de implantação e segurança</h4><p>O repositório inclui <strong>database/schema.sql</strong> para <strong>PostgreSQL</strong> e orienta criar o banco <strong>e_cormeci</strong>. Porém, o README esclarece que o frontend ainda usa dados locais de demonstração e que o acesso ao PostgreSQL deve ser feito por uma API backend. Portanto, a existência do schema não comprova um banco remoto nem que ele esteja conectado ao site. Nunca colocar senha/credenciais de banco no bundle Vite; o backend deve validar preços, produtos, endereço e pedidos.</p></section>
+                            <section class="doc-bloco"><h4>Publicação e documentação</h4><p><strong>URL publicada informada:</strong> Render — <a href="https://e-cormeci.onrender.com/" target="_blank" rel="noopener noreferrer">abrir aplicação</a>. Isso não confirma que API ou banco estejam publicados no Render. <strong>Documentação:</strong> <a href="https://github.com/kerlonlld/e-cormeci" target="_blank" rel="noopener noreferrer">repositório, README e database/schema.sql</a>. Verificar configuração de serviço, API e PostgreSQL no painel de deploy para identificar os endpoints ativos.</p></section>
+                            <p class="doc-nota"><strong>Tecnologias verificadas:</strong> React, Vite, JavaScript, CSS e schema PostgreSQL; API HTTP consumida pelo frontend. Backend e banco remoto: não confirmados em produção.</p>
+                        </div>
+                    </details>
+                    <div class="botoes-projeto">
+                        <a href="https://e-cormeci.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn-site">Abrir projeto publicado ↗</a>
+                        <a href="https://github.com/kerlonlld/e-cormeci" target="_blank" rel="noopener noreferrer" class="btn-github">Código no GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Meus primeiros projetos -->
+        <h3 class="projetos-subtitulo">Projetos de estudo</h3>
+        <div class="projetos-caixa">
+            <div class="projetos-item">
+                <a href="https://kerlonlld.github.io/marketplace2/" target="_blank" rel="noopener noreferrer" class="projeto-preview">
+                    <img src="digital-commerce.webp" alt="projeto ecommerce" class="projetos-imagem">
+                </a>
+                <div class="caixa-textos-projetos">
+                    <h3 class="inf-projeto">MarketPlace</h3>
+                    <p class="paragrafo-projeto">Protótipo de marketplace com catálogo, filtros, detalhes de produtos e carrinho. O checkout demonstra o resumo da compra; não processa pagamento real.</p>
+                    <details class="estudo-projeto" open>
+                        <summary>Estudo de caso completo <span>· clique para recolher</span></summary>
+                        <div class="estudo-conteudo">
+                            <figure class="diagrama-caso"><img src="assets/diagrams/marketplace.svg" alt="Diagrama do comprador: busca produtos, adiciona ao carrinho e segue para finalizar a compra"><figcaption>Diagrama do caso de uso — jornada de compra proposta.</figcaption></figure>
+                            <section class="doc-bloco"><h4>Problema e objetivo</h4><p>Estudo de uma experiência de comércio eletrônico para apresentar produtos, permitir a seleção de itens e explorar a jornada de compra em uma interface web.</p></section>
+                            <section class="doc-bloco"><h4>Atores e fluxo principal</h4><ol><li>O comprador navega por categorias e consulta detalhes, preço, avaliações e variações do produto.</li><li>Escolhe opções/quantidade e adiciona o produto ao carrinho; pode alterar ou remover itens.</li><li>Abre a finalização e recebe um resumo da compra, incluindo quantidade e total.</li></ol><p>O código encerra o fluxo com mensagem de demonstração e remoção do item do carrinho; não há confirmação de pedido em servidor nem transação financeira.</p></section>
+                            <section class="doc-bloco"><h4>Escopo e arquitetura implementada</h4><p>Site estático em HTML, CSS e JavaScript, incluindo catálogo categorizado, filtros, modal de detalhes, modal de compra rápida, variações e carrinho no estado da página. Os dados do catálogo são carregados por scripts/arquivos do projeto. Não foi identificada API, painel administrativo conectado ou persistência de pedidos entre sessões.</p></section>
+                            <section class="doc-bloco"><h4>Dados, pagamento e limites</h4><p><strong>Banco de dados:</strong> nenhum identificado; carrinho em memória da página. <strong>Pagamento:</strong> nenhum gateway integrado. O checkout monta um resumo de demonstração e pode exibir um número aleatório de pedido, mas isso não representa pedido persistido ou pagamento aprovado. GitHub Pages apenas hospeda arquivos estáticos. Para produção são necessários backend para catálogo/estoque/pedidos e provedor de pagamento seguro.</p></section>
+                            <section class="doc-bloco"><h4>Publicação e documentação</h4><p><strong>Hospedagem:</strong> GitHub Pages. <a href="https://kerlonlld.github.io/marketplace2/" target="_blank" rel="noopener noreferrer">Abrir a aplicação publicada</a>.</p><p><strong>Repositório:</strong> <a href="https://github.com/kerlonlld/marketplace2" target="_blank" rel="noopener noreferrer">consultar código-fonte e arquivos do projeto</a>. Configurações de publicação devem ser conferidas no repositório; este estudo descreve o funcionamento observado no código.</p></section>
+                            <p class="doc-nota"><strong>Tecnologias verificadas:</strong> HTML, CSS e JavaScript (há também uma versão mobile com React via CDN/Babel). Projeto demonstrativo, sem processamento financeiro real.</p>
+                        </div>
+                    </details>
+                    <div class="botoes-projeto">
+                        <a href="https://kerlonlld.github.io/marketplace2/" target="_blank" rel="noopener noreferrer" class="btn-site">Abrir projeto publicado ↗</a>
+                        <a href="https://github.com/kerlonlld/marketplace2" target="_blank" rel="noopener noreferrer" class="btn-github">Código no GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projetos-item">
+                <a href="https://kerlonlld.github.io/edua-/index.html" target="_blank" rel="noopener noreferrer" class="projeto-preview">
+                    <img src="000040290M.jpeg" alt="aplicativo de estudos" class="projetos-imagem">
+                </a>
+                <div class="caixa-textos-projetos">
+                    <h3 class="inf-projeto">Educa+</h3>
+                    <p class="paragrafo-projeto">Protótipo educacional com cadastro local, matérias, quizzes, progresso por disciplina e links de estudo. Sem banco remoto; credenciais ficam no armazenamento do navegador.</p>
+                    <details class="estudo-projeto" open>
+                        <summary>Estudo de caso completo <span>· clique para recolher</span></summary>
+                        <div class="estudo-conteudo">
+                            <figure class="diagrama-caso"><img src="assets/diagrams/educa-mais.svg" alt="Diagrama da jornada de estudo: estudante acessa recursos, responde quizzes, acompanha o progresso da sessão e cria uma tarefa"><figcaption>Diagrama do caso de uso — quizzes e cronograma de tarefas.</figcaption></figure>
+                            <section class="doc-bloco"><h4>Problema e objetivo</h4><p>Aplicativo em desenvolvimento para apoiar a organização dos estudos com recomendações de sites, perguntas e respostas, lembretes e acompanhamento do progresso.</p></section>
+                            <section class="doc-bloco"><h4>Atores e fluxo principal</h4><ol><li>O estudante cria uma conta com nome, e-mail e senha; depois pode entrar com as credenciais cadastradas.</li><li>No painel, consulta páginas de matérias e links externos de estudo.</li><li>Escolhe uma disciplina, responde às perguntas e envia as respostas.</li><li>O sistema compara as respostas, mostra acertos e atualiza o percentual de progresso por disciplina.</li><li>O cronograma permite adicionar tarefas à lista visível.</li></ol><p>O painel inclui uma seção de notificações informativa, mas o código consultado não implementa envio de notificações. As tarefas aparecem na página, sem persistência confirmada.</p></section>
+                            <section class="doc-bloco"><h4>Escopo e arquitetura implementada</h4><p>Site estático dividido entre <strong>index.html</strong> (cadastro/login) e <strong>panel.html</strong> (matérias, quizzes, progresso, cronograma e notificações), com CSS e JavaScript nativos. As perguntas dos quizzes estão definidas no próprio script. O cadastro e a autenticação são feitos somente no navegador; não há serviço de autenticação ou API no código consultado.</p></section>
+                            <section class="doc-bloco"><h4>Armazenamento e segurança</h4><p><strong>Banco remoto:</strong> nenhum identificado. Nome, e-mail e senha são guardados em <strong>localStorage</strong>; a senha é armazenada em texto simples. O progresso dos quizzes fica em memória JavaScript e as tarefas são inseridas na página, então não há persistência garantida após recarga. Este protótipo deve ser usado somente para demonstração, nunca com senhas reais ou dados pessoais. Uma versão de produção precisa de autenticação e persistência seguras no servidor.</p></section>
+                            <section class="doc-bloco"><h4>Publicação e documentação</h4><p><strong>Hospedagem:</strong> GitHub Pages — <a href="https://kerlonlld.github.io/edua-/index.html" target="_blank" rel="noopener noreferrer">abrir tela de entrada</a>. O painel é a página <strong>panel.html</strong> no repositório. <strong>Código-fonte:</strong> <a href="https://github.com/kerlonlld/edua-" target="_blank" rel="noopener noreferrer">consultar arquivos do projeto</a>; a descrição técnica acima complementa o repositório, que não apresenta documentação funcional detalhada.</p></section>
+                            <p class="doc-nota"><strong>Tecnologias verificadas:</strong> HTML, CSS e JavaScript nativo. Sem banco remoto nem mecanismo ativo de notificações.</p>
+                        </div>
+                    </details>
+                    <div class="botoes-projeto">
+                        <a href="https://kerlonlld.github.io/edua-/index.html" target="_blank" rel="noopener noreferrer" class="btn-site">Abrir projeto publicado ↗</a>
+                        <a href="https://github.com/kerlonlld/edua-" target="_blank" rel="noopener noreferrer" class="btn-github">Código no GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
     <section id="contato" class="contato">
         <h2 class="contato-titulo">Entre em Contato</h2>
         <form class="formulario-contato" id="formulario" onsubmit="enviarwhats(event)">
             <div class="grupo-form">
-            <input placeholder="nome" class="campo-form" id="nome">
+                <input placeholder="nome" class="campo-form" id="nome">
             </div>
             <div class="grupo-form">
-            <textarea placeholder="digite sua mensagem" class="campo-form" rows="6" id="mensagem"></textarea>
+                <textarea placeholder="digite sua mensagem" class="campo-form" rows="6" id="mensagem"></textarea>
             </div>
             <button type="submit" class="botao-form">Enviar WhatsApp</button>
         </form>
@@ -134,18 +271,131 @@
     
     <script>
     function enviarwhats(event) {
-    event.preventDefault();
+        event.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const mensagem = document.getElementById('mensagem').value;
-    const telefone = '5538998625393';
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+        const telefone = '5538998625393';
 
-    const texto = `Olá, meu nome é ${nome}, ${mensagem}`
-    const msgFormatada = encodeURIComponent(texto);
-    const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+        const texto = `Olá, meu nome é ${nome}, ${mensagem}`;
+        const msgFormatada = encodeURIComponent(texto);
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
 
-    window.open(url, '_blank');
+        window.open(url, '_blank');
     }
+
+    // Revela os conteúdos conforme entram na área visível.
+    const elementosRevelados = document.querySelectorAll(
+        '.sobre-titulo, .sobre-caixa, .projetos-titulo, .projetos-subtitulo, .projetos-item, .contato-titulo, .formulario-contato'
+    );
+    const prefereMovimentoReduzido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefereMovimentoReduzido || !('IntersectionObserver' in window)) {
+        elementosRevelados.forEach((elemento) => elemento.classList.add('visivel'));
+    } else {
+        const observador = new IntersectionObserver((entradas, observer) => {
+            entradas.forEach((entrada) => {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add('visivel');
+                    observer.unobserve(entrada.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        elementosRevelados.forEach((elemento) => {
+            elemento.classList.add('revelar');
+            observador.observe(elemento);
+        });
+    }
+
+    // Indicador fino do quanto da página já foi percorrido.
+    const barraRolagem = document.getElementById('barra-rolagem');
+    let atualizacaoPendente = false;
+
+    function atualizarProgressoRolagem() {
+        const alturaRolavel = document.documentElement.scrollHeight - window.innerHeight;
+        const progresso = alturaRolavel > 0 ? (window.scrollY / alturaRolavel) * 100 : 0;
+        barraRolagem.style.width = `${Math.min(progresso, 100)}%`;
+        atualizacaoPendente = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!atualizacaoPendente) {
+            window.requestAnimationFrame(atualizarProgressoRolagem);
+            atualizacaoPendente = true;
+        }
+    }, { passive: true });
+    atualizarProgressoRolagem();
+
+    // O cartão pode ser arrastado, mas permanece dentro do quadro decorativo.
+    const areaArrastavel = document.getElementById('area-arrastavel');
+    const cartaoArrastavel = document.getElementById('cartao-arrastavel');
+    const alcaArrastar = document.getElementById('alca-arrastar');
+    let arrasteAtivo = false;
+    let deslocamentoX = 0;
+    let deslocamentoY = 0;
+
+    function limitarPosicao(x, y) {
+        const limiteX = Math.max(0, areaArrastavel.clientWidth - cartaoArrastavel.offsetWidth);
+        const limiteY = Math.max(0, areaArrastavel.clientHeight - cartaoArrastavel.offsetHeight);
+        return {
+            x: Math.max(0, Math.min(x, limiteX)),
+            y: Math.max(0, Math.min(y, limiteY))
+        };
+    }
+
+    alcaArrastar.addEventListener('pointerdown', (evento) => {
+        if (evento.pointerType === 'mouse' && evento.button !== 0) return;
+        const cartao = cartaoArrastavel.getBoundingClientRect();
+        const area = areaArrastavel.getBoundingClientRect();
+        deslocamentoX = evento.clientX - cartao.left;
+        deslocamentoY = evento.clientY - cartao.top;
+        arrasteAtivo = true;
+        cartaoArrastavel.classList.add('arrastando');
+        alcaArrastar.setPointerCapture(evento.pointerId);
+        evento.preventDefault();
+        // Guarda a posição no sistema de coordenadas da área ao iniciar o movimento.
+        cartaoArrastavel.style.left = `${cartao.left - area.left}px`;
+        cartaoArrastavel.style.top = `${cartao.top - area.top}px`;
+        cartaoArrastavel.style.transform = 'none';
+    });
+
+    alcaArrastar.addEventListener('pointermove', (evento) => {
+        if (!arrasteAtivo) return;
+        const area = areaArrastavel.getBoundingClientRect();
+        const posicao = limitarPosicao(
+            evento.clientX - area.left - deslocamentoX,
+            evento.clientY - area.top - deslocamentoY
+        );
+        cartaoArrastavel.style.left = `${posicao.x}px`;
+        cartaoArrastavel.style.top = `${posicao.y}px`;
+    });
+
+    function finalizarArraste() {
+        arrasteAtivo = false;
+        cartaoArrastavel.classList.remove('arrastando');
+    }
+
+    alcaArrastar.addEventListener('pointerup', finalizarArraste);
+    alcaArrastar.addEventListener('pointercancel', finalizarArraste);
+
+    alcaArrastar.addEventListener('keydown', (evento) => {
+        const direcoes = {
+            ArrowLeft: [-16, 0], ArrowRight: [16, 0],
+            ArrowUp: [0, -16], ArrowDown: [0, 16]
+        };
+        if (!direcoes[evento.key]) return;
+        evento.preventDefault();
+        const area = areaArrastavel.getBoundingClientRect();
+        const cartao = cartaoArrastavel.getBoundingClientRect();
+        const posicao = limitarPosicao(
+            cartao.left - area.left + direcoes[evento.key][0],
+            cartao.top - area.top + direcoes[evento.key][1]
+        );
+        cartaoArrastavel.style.left = `${posicao.x}px`;
+        cartaoArrastavel.style.top = `${posicao.y}px`;
+        cartaoArrastavel.style.transform = 'none';
+    });
     </script>
 </body>
 </html>
